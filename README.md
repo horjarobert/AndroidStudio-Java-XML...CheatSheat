@@ -6,4 +6,4 @@ Android Studio - Cheat sheet for Java &amp; XML
 [Animation](#animation)
 Layout
 
-#<a href="animation"><em>Animation</em></a>
+# <a href="animation"></a><em>Animation</em>

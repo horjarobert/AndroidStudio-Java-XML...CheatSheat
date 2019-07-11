@@ -3,7 +3,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 
 # Table of Contents
 
-### +[Animation](#animation)  
+### +[Animation](#animation-1)  
 ### +Drawable
 ### +Java
 ### +Layout

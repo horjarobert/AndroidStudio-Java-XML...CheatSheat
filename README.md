@@ -4,6 +4,8 @@ Android Studio - Cheat sheet for Java &amp; XML
 # Table of Contents
 
 ### +[Animation](#animation)  
+### +Drawable
+### +Java
 ### +Layout
 
 ***
@@ -33,7 +35,7 @@ Android Studio - Cheat sheet for Java &amp; XML
         />
 </set>
 ````
-
+***
 3) Left to right - leftToRight.xml (inside res/anim folder)
 ````
 <?xml version="1.0" encoding="utf-8"?>
@@ -46,7 +48,7 @@ Android Studio - Cheat sheet for Java &amp; XML
         />
 </set>
 ````
-
+***
 4) Right to left - rightToLeft.xml (inside res/anim folder)
 ````
 <?xml version="1.0" encoding="utf-8"?>
@@ -59,3 +61,18 @@ Android Studio - Cheat sheet for Java &amp; XML
         />
 </set>
 ````
+***
+5) Bouncing - bounce.xml (inside res/anim folder) - from bottom to up
+````
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+
+android:interpolator="@android:anim/bounce_interpolator">
+
+<translate
+    android:duration="3000"
+    android:fromYDelta="100%p"
+    android:toYDelta="0%p" />
+</set>
+````
+

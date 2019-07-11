@@ -1,6 +1,6 @@
 # AndroidStudio-Java-XML...CheatSheat
 Android Studio - Cheat sheet for Java &amp; XML
-# <em>IN PROGRESS...</em> #
+# <em>~ ~ ~ IN PROGRESS... ~ ~ ~</em> #
 # Table of Contents
 
 ### +[Animation](#animation-1)  

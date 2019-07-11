@@ -3,13 +3,13 @@ Android Studio - Cheat sheet for Java &amp; XML
 
 # Table of Contents
 
-### +[Animation](#animation-1)  
+### +[Animation](#animation)  
 ### +Drawable
 ### +Java
 ### +Layout
 
 ***
-# <a href="animation-1"></a><em>Animation</em>   
+# <a href="animation"></a><em>Animation</em>   
 1) Bottom to up - bottomToUp.xml (inside res/anim folder)  
 ````
 <?xml version="1.0" encoding="utf-8"?>

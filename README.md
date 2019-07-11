@@ -4,7 +4,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 # Table of Contents
 
 ### +[Animation](#animation)  
-    -[Bottom to up](#anim-bottom_to_up)
+-[Bottom to up](#anim-bottom_to_up)
 ### +Layout
 
 ***

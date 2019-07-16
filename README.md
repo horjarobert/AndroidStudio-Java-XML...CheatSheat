@@ -118,3 +118,14 @@ btn.setOnClickListener(View.OnClickListener {
 })
 ```
 ***
+3) Animation code... 
+```
+//At the beginning...
+private lateinit var btnFix: Button
+private lateinit var anim_fix: Animation
+
+//...
+
+//Set animation (you have already created anim_fix inside anim folder...)
+    anim_fix = AnimationUtils.loadAnimation(this, R.anim.anim_fix)
+    btnFix.startAnimation(anim_fix)

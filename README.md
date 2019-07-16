@@ -7,7 +7,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 ### +Drawable
 ### +Gradle
 ### +Java
-### +ăKotlin](#kotlin-1)
+### +[Kotlin](#kotlin-1)
 ### +Layout
 
 ***

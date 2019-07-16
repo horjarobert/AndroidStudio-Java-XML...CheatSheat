@@ -107,4 +107,18 @@ android:interpolator="@android:anim/bounce_interpolator">
     }
 ```
 ***
+2)Transition text/button (button UP, text DOWN; all in lay1)
+```
+btn.setOnClickListener(View.OnClickListener {
+            TransitionManager.beginDelayedTransition(lay1)
 
+            txt.visibility = if (txt.visibility == View.VISIBLE){
+                View.GONE
+            } else{
+                View.VISIBLE
+            }
+
+
+        })
+```
+***

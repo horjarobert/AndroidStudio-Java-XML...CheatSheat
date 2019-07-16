@@ -80,7 +80,7 @@ android:interpolator="@android:anim/bounce_interpolator">
 
 ***
 # <a href="kotlin"></a><em>Kotlin</em>   
-1)Enable fullscreen mode
+1) Enable fullscreen mode
 ```
 //Enable fullscreen mode
     override fun onWindowFocusChanged(hasFocus: Boolean) {
@@ -107,7 +107,7 @@ android:interpolator="@android:anim/bounce_interpolator">
     }
 ```
 ***
-2)Transition text/button (button UP, text DOWN; all in lay1)
+2) Transition text/button (button UP, text DOWN; all in lay1)
 ```
 btn.setOnClickListener(View.OnClickListener {
             TransitionManager.beginDelayedTransition(lay1)

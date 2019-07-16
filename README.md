@@ -117,8 +117,6 @@ btn.setOnClickListener(View.OnClickListener {
             } else{
                 View.VISIBLE
             }
-
-
-        })
+})
 ```
 ***

@@ -107,7 +107,7 @@ android:interpolator="@android:anim/bounce_interpolator">
     }
 ```
 ***
-2) Transition text/button (button UP, text DOWN; all in lay1)
+2) Transition button/text (button clicked, text come to life from GONE - reverse; all in lay1)
 ```
 btn.setOnClickListener(View.OnClickListener {
             TransitionManager.beginDelayedTransition(lay1)

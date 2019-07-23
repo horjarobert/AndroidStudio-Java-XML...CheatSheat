@@ -6,7 +6,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 ### +[Animation](#animation-1)  
 ### +Drawable
 ### +Gradle
-### +Java
+### +[Java](#java-1)
 ### +[Kotlin](#kotlin-1)
 ### +Layout
 
@@ -77,6 +77,45 @@ android:interpolator="@android:anim/bounce_interpolator">
     android:toYDelta="0%p" />
 </set>
 ````
+
+***
+# <a href="java"></a><em>Java</em>
+1) Alert user when EditText limit exceeded
+```
+public class MainActivity extends AppCompatActivity //...
+
+//On the top (roof)
+private EditText editTextItem;
+int n = 10;
+...
+
+//Inside onCreate...
+editTextItem = findViewById(R.id.ediTextItem);
+
+//...
+
+//Lower...
+
+editTextItem.addTextChangedListener(new TextWatcher() {
+    @Override
+        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        }
+
+    @Override
+        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            if (charSequence.length() == n)
+            {
+                new AlertDialog.Builder(MainActivity.this).setTitle("Limit ending").setMessage("You can't type more than " + n + " characters. Thank you!").setPositiveButton(android.R.string.ok, null).setCancelable(false).show();
+            }
+    }
+    
+    @Override
+        public void afterTextChanged(Editable editable) {
+
+        }
+
+});
+```
 
 ***
 # <a href="kotlin"></a><em>Kotlin</em>   

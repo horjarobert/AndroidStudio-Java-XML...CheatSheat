@@ -124,7 +124,7 @@ editTextItem.addTextChangedListener(new TextWatcher() {
 override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) hideSystemUI()
-    }
+}
 
 private fun hideSystemUI() {
         window.decorView.systemUiVisibility = (
@@ -134,14 +134,14 @@ private fun hideSystemUI() {
                         View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
                         View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
                         View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                )
-    }
+        )
+}
 
  private fun showSystemUI() {
         window.decorView.systemUiVisibility = (View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
-    }
+}
 ```
 ***
 2) Transition button/text (button clicked, text come to life from GONE - reverse; all in lay1)

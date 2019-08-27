@@ -77,11 +77,31 @@ android:interpolator="@android:anim/bounce_interpolator">
     android:toYDelta="0%p" />
 </set>
 ````
+***
+# <a href="drawable"></a><em>Drawable</em>
+1) Layout (for a button or any other component) with a transparent color and with a dashed (continue) line on the bottom, regardless of the height
+````
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorPrimaryDark">
+
+    <item android:top="-20dp" android:right="-20dp" android:left="-20dp">
+        <shape>
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:dashGap="0px"
+                android:dashWidth="5px"
+                android:width="5dp"
+                android:color="#fff" />
+        </shape>
+    </item>
+
+</ripple>
+````
 
 ***
 # <a href="java"></a><em>Java</em>
 1) Alert user when EditText limit exceeded
-```
+````
 public class MainActivity extends AppCompatActivity //...
 
 //On the top (roof)
@@ -115,12 +135,12 @@ editTextItem.addTextChangedListener(new TextWatcher() {
         }
 
 });
-```
+````
 
 ***
 # <a href="kotlin"></a><em>Kotlin</em>   
 1) Enable fullscreen mode
-```
+````
 override fun onWindowFocusChanged(hasFocus: Boolean) {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) hideSystemUI()
@@ -142,10 +162,10 @@ private fun hideSystemUI() {
                 or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)
 }
-```
+````
 ***
 2) Transition button/text (button clicked, text come to life from GONE - reverse; all in lay1)
-```
+````
 btn.setOnClickListener(View.OnClickListener {
             TransitionManager.beginDelayedTransition(lay1)
 
@@ -155,10 +175,10 @@ btn.setOnClickListener(View.OnClickListener {
                 View.VISIBLE
             }
 })
-```
+````
 ***
 3) Animation code... 
-```
+````
 //At the beginning...
 private lateinit var btnFix: Button
 private lateinit var anim_fix: Animation
@@ -168,3 +188,8 @@ private lateinit var anim_fix: Animation
 //Set animation (you have already created anim_fix inside anim folder...)
     anim_fix = AnimationUtils.loadAnimation(this, R.anim.anim_fix)
     btnFix.startAnimation(anim_fix)
+ 
+````
+***
+ 
+    

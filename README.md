@@ -4,6 +4,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 # Table of Contents
 
 ### +[Animation](#animation-1)  
+### +Animator
 ### +[Drawable](#drawable-1)
 ### +Gradle
 ### +[Java](#java-1)

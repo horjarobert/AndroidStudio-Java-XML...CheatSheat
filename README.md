@@ -4,7 +4,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 # Table of Contents
 
 ### +[Animation](#animation-1)  
-### +Drawable
+### +[Drawable](#drawable-1)
 ### +Gradle
 ### +[Java](#java-1)
 ### +[Kotlin](#kotlin-1)
@@ -79,7 +79,7 @@ android:interpolator="@android:anim/bounce_interpolator">
 ````
 ***
 # <a href="drawable"></a><em>Drawable</em>
-1) Layout (for a button or any other component) with a transparent color and with a dashed (continue) line on the bottom, regardless of the height
+1) Layout (for a button or any other component) with a transparent color and a dashed (continue) line on the bottom, regardless of the height (ripple effect)
 ````
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="@color/colorPrimaryDark">
@@ -92,6 +92,37 @@ android:interpolator="@android:anim/bounce_interpolator">
                 android:dashWidth="5px"
                 android:width="5dp"
                 android:color="#fff" />
+        </shape>
+    </item>
+
+</ripple>
+````
+***
+2) Round layout with ripple effect
+````
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/white">
+
+
+    <item>
+        <shape android:shape="rectangle">
+
+
+            <solid android:color="@color/colorPrimaryDark">
+            </solid>
+
+            <stroke android:width="4dp"
+                android:color="@color/colorAccent"
+                />
+
+
+            <size android:height="200dp"
+                android:width="200dp">
+
+            </size>
+
+            <corners android:radius="100dp"/>
+
         </shape>
     </item>
 

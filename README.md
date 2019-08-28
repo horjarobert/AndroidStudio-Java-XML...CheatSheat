@@ -186,6 +186,36 @@ editTextItem.addTextChangedListener(new TextWatcher() {
 
 });
 ````
+***
+2) Enable fullscreen mode
+````
+//inside onCreate method
+
+    //navbar-fullscreen
+    hideNavigationBar();
+
+//outside onCreate method
+//hide the navigation bar and make full screen all app
+    private void hideNavigationBar() {
+        this.getWindow().getDecorView()
+                .setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_FULLSCREEN |
+                                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+                                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                );
+    }
+
+    //when I exit for a moment from the app and I'll come back, the same effect must be continue
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        hideNavigationBar();
+    }
+````
 
 ***
 # <a href="kotlin"></a><em>Kotlin</em>   

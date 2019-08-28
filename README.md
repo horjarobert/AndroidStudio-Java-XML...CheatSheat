@@ -79,6 +79,24 @@ android:interpolator="@android:anim/bounce_interpolator">
 </set>
 ````
 ***
+6) Fancy animation - rotate and go from left to right
+````
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+<translate
+    android:fromXDelta="-500%"
+    android:toXDelta="0%"
+    android:duration="1000"
+    />
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="360"
+        android:pivotX="5%"
+        android:pivotY="5%"
+        android:duration="1000"
+    />
+</set>
+````
+***
 # <a href="drawable"></a><em>Drawable</em>
 1) Layout (for a button or any other component) with a transparent color and a dashed (continue) line on the bottom, regardless of the height (ripple effect)
 ````

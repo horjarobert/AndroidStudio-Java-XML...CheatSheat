@@ -217,7 +217,7 @@ editTextItem.addTextChangedListener(new TextWatcher() {
     }
 ````
 ***
-3) Copy a TextView to clipboard:
+3) Copy a TextView to the clipboard:
 ````
 btn_copy.setOnClickListener(new View.OnClickListener() {
             @Override

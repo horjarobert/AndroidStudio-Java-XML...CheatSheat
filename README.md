@@ -216,7 +216,35 @@ editTextItem.addTextChangedListener(new TextWatcher() {
         hideNavigationBar();
     }
 ````
+***
+3) Copy a TextView to clipboard:
+````
+btn_copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+                clipboard.setText(text.getText());
 
+                Toast.makeText(getApplicationContext(), "Copied...", Toast.LENGTH_LONG).show();
+            }
+});
+````
+4) Share a TextView to others:
+````
+btn_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String s = text.getText().toString();
+                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                sharingIntent.setType("text/plain");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, s);
+                startActivity(Intent.createChooser(sharingIntent, "Make a joy"));
+
+                Toast.makeText(getApplicationContext(), "Share with...", Toast.LENGTH_LONG).show();
+
+            }
+});
+````
 ***
 # <a href="kotlin"></a><em>Kotlin</em>   
 1) Enable fullscreen mode

@@ -245,6 +245,45 @@ btn_share.setOnClickListener(new View.OnClickListener() {
             }
 });
 ````
+5) Constraint layout - smooth effect:
+```
+//1) create a new layout - a clone of your main layout or of that layout on which you want to make the SMOOTH EFFECT
+//2) after you have 2 layouts, make some arrangements in the clone one, for example, that button from bottom, put in on top (or wahtever...)
+//3) use this in java class:
+
+//**on top, declarations - initializations**:::
+    //for main_programmer
+    private boolean isProgrammer;
+    private ConstraintSet constraintSet_main_programmer_OLD = new ConstraintSet();
+    private ConstraintSet constraintSet_main_programmer_NEW = new ConstraintSet();
+    
+//*in onCreate function*::
+        //clones
+        constraintSet_main_programmer_OLD.clone(mainLayout);
+        constraintSet_main_programmer_NEW.clone(this, R.layout.main_programmer);
+
+//change layout to main_programmer
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    public void ChangeIsProgrammer(View v){
+        //navbar-fullscreen
+        hideNavigationBar();
+
+        TransitionManager.beginDelayedTransition(mainLayout);
+
+        if(!isProgrammer){
+            constraintSet_main_programmer_NEW.applyTo(mainLayout);
+            isProgrammer = true;
+            programmerBtn.setText(R.string.programmerBtnNew);
+            programmerBtn.setBackgroundResource(R.drawable.main_ui_btns_background_without_corners);
+        }
+        else{
+            constraintSet_main_programmer_OLD.applyTo(mainLayout);
+            isProgrammer = false;
+            programmerBtn.setText(R.string.programmerBtn);
+            programmerBtn.setBackgroundResource(R.drawable.main_ui_btns_background);
+        }
+    }
+```
 ***
 # <a href="kotlin"></a><em>Kotlin</em>   
 1) Enable fullscreen mode
@@ -296,7 +335,6 @@ private lateinit var anim_fix: Animation
 //Set animation (you have already created anim_fix inside anim folder...)
     anim_fix = AnimationUtils.loadAnimation(this, R.anim.anim_fix)
     btnFix.startAnimation(anim_fix)
- 
 ````
 ***
  

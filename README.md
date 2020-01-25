@@ -26,7 +26,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 </set>
 ```` 
 ***
-2) Up to bottom - upToBottom.xml (inside res/anim folder)
+2) Up to bottom animation
 ````
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
@@ -39,7 +39,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 </set>
 ````
 ***
-3) Left to right - leftToRight.xml (inside res/anim folder)
+3) Left to right animation
 ````
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
@@ -52,7 +52,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 </set>
 ````
 ***
-4) Right to left - rightToLeft.xml (inside res/anim folder)
+4) Right to left animation
 ````
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
@@ -65,7 +65,7 @@ Android Studio - Cheat sheet for Java &amp; XML
 </set>
 ````
 ***
-5) Bouncing - bounce.xml (inside res/anim folder) - from bottom to up
+5) Bouncing animation - from bottom to up
 ````
 <?xml version="1.0" encoding="utf-8"?>
 <set xmlns:android="http://schemas.android.com/apk/res/android"
@@ -94,6 +94,38 @@ android:interpolator="@android:anim/bounce_interpolator">
         android:pivotY="5%"
         android:duration="1000"
     />
+</set>
+````
+***
+7) Blinking animation - on/off
+````
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        android:duration="200"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"/>
+</set>
+````
+***
+8) Bigger/smaller animation
+````
+<?xml version="1.0" encoding="utf-8"?>
+
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <scale
+        android:fromXScale="1.0"
+        android:fromYScale="1.0"
+        android:toXScale="1.2"
+        android:toYScale="1.2"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="3000"
+        android:repeatMode="reverse"
+        android:repeatCount="3"
+        />
 </set>
 ````
 ***

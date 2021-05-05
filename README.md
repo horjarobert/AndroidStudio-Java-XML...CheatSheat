@@ -227,7 +227,7 @@ editTextItem.addTextChangedListener(new TextWatcher() {
     hideNavigationBar();
 
 //outside onCreate method
-//hide the navigation bar and make full screen all app
+//hide the navigation bar and make full screen the entire app
     private void hideNavigationBar() {
         this.getWindow().getDecorView()
                 .setSystemUiVisibility(

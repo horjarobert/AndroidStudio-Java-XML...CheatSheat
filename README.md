@@ -186,17 +186,17 @@ android:interpolator="@android:anim/bounce_interpolator">
 ````
 public class MainActivity extends AppCompatActivity //...
 
-//On the top (roof)
+// On the top (roof)
 private EditText editTextItem;
 int n = 10;
 ...
 
-//Inside onCreate...
+// Inside onCreate...
 editTextItem = findViewById(R.id.ediTextItem);
 
 //...
 
-//Lower...
+// Lower...
 
 editTextItem.addTextChangedListener(new TextWatcher() {
     @Override
@@ -221,13 +221,13 @@ editTextItem.addTextChangedListener(new TextWatcher() {
 ***
 2) Enable fullscreen mode
 ````
-//inside onCreate method
+// Inside onCreate method
 
-    //navbar-fullscreen
+    // Navbar-fullscreen
     hideNavigationBar();
 
-//outside onCreate method
-//hide the navigation bar and make full screen the entire app
+// Outside onCreate method
+// Hide the navigation bar and make the entire app full-screen
     private void hideNavigationBar() {
         this.getWindow().getDecorView()
                 .setSystemUiVisibility(
@@ -240,7 +240,7 @@ editTextItem.addTextChangedListener(new TextWatcher() {
                 );
     }
 
-    //when I exit for a moment from the app and I'll come back, the same effect must be continue
+    // When I exit for a moment from the app and I'll come back, the same effect must be continue
     @Override
     protected void onResume() {
         super.onResume();
@@ -279,22 +279,22 @@ btn_share.setOnClickListener(new View.OnClickListener() {
 ````
 5) Constraint layout - smooth effect:
 ```
-//1) create a new layout - a clone of your main layout or of that layout on which you want to make the SMOOTH EFFECT
-//2) after you have 2 layouts, make some arrangements in the clone one, for example, that button from bottom, put in on top (or wahtever...)
-//3) use this in java class:
+//1) Create a new layout - a clone of your main layout or of that layout on which you want to make the SMOOTH EFFECT
+//2) After you have 2 layouts, make some arrangements in the clone one, for example, that button from bottom, put in on top (or wahtever...)
+//3) Use this in java class:
 
-//**on top, declarations - initializations**:::
-    //for main_programmer
+//** On top, declarations - initializations**:::
+    // For main_programmer
     private boolean isProgrammer;
     private ConstraintSet constraintSet_main_programmer_OLD = new ConstraintSet();
     private ConstraintSet constraintSet_main_programmer_NEW = new ConstraintSet();
     
-//*in onCreate function*::
+//* In onCreate function*::
         //clones
         constraintSet_main_programmer_OLD.clone(mainLayout);
         constraintSet_main_programmer_NEW.clone(this, R.layout.main_programmer);
 
-//change layout to main_programmer
+// Change layout to main_programmer
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     public void ChangeIsProgrammer(View v){
         //navbar-fullscreen
@@ -358,13 +358,13 @@ btn.setOnClickListener(View.OnClickListener {
 ***
 3) Animation code... 
 ````
-//At the beginning...
+// At the beginning...
 private lateinit var btnFix: Button
 private lateinit var anim_fix: Animation
 
 //...
 
-//Set animation (you have already created anim_fix inside anim folder...)
+// Set animation (you have already created anim_fix inside anim folder...)
     anim_fix = AnimationUtils.loadAnimation(this, R.anim.anim_fix)
     btnFix.startAnimation(anim_fix)
 ````

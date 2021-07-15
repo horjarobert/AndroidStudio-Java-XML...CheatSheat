@@ -249,7 +249,7 @@ editTextItem.addTextChangedListener(new TextWatcher() {
     }
 ````
 ***
-3) Copy a TextView to the clipboard:
+3) Copy a TextView to the clipboard
 ````
 btn_copy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -261,7 +261,7 @@ btn_copy.setOnClickListener(new View.OnClickListener() {
             }
 });
 ````
-4) Share a TextView to others:
+4) Share a TextView to others
 ````
 btn_share.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -277,7 +277,7 @@ btn_share.setOnClickListener(new View.OnClickListener() {
             }
 });
 ````
-5) Constraint layout - smooth effect:
+5) Constraint layout - smooth effect
 ```
 //1) Create a new layout - a clone of your main layout or of that layout on which you want to make the SMOOTH EFFECT
 //2) After you have 2 layouts, make some arrangements in the clone one, for example, that button from bottom, put in on top (or wahtever...)
@@ -316,7 +316,7 @@ btn_share.setOnClickListener(new View.OnClickListener() {
         }
     }
 ```
-6) Score incrementation after every second:
+6) Score incrementation after every second
 ```
 public void ScoreIncrementation() {
 

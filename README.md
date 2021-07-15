@@ -316,6 +316,31 @@ btn_share.setOnClickListener(new View.OnClickListener() {
         }
     }
 ```
+6) Score incrementation after every second:
+```
+public void ScoreIncrementation() {
+
+        timer = new Timer();
+        handler = new Handler();
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                scor++;
+                txt_score_value.setText(String.valueOf(scor));
+            }
+        };
+
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                handler.postDelayed(runnable, 1000);
+            }
+        };
+
+        timer.schedule(timerTask, 0, 1000);
+
+    }
+```
 ***
 # <a href="kotlin"></a><em>Kotlin</em>   
 1) Enable fullscreen mode
